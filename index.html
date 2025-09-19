@@ -7,59 +7,42 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Login Section -->
+    <!-- Login Page -->
     <div class="login-container" id="login-container">
-        <h1 class="login-title">Choose Your Avatar & Username</h1>
-        <div class="avatars">
-            <div class="avatar-item">
-                <img src="avatars/ironman.png" alt="Iron Man">
-                <input type="text" placeholder="IronMan" class="username">
-            </div>
-            <div class="avatar-item">
-                <img src="avatars/captain.png" alt="Captain America">
-                <input type="text" placeholder="Captain" class="username">
-            </div>
-            <div class="avatar-item">
-                <img src="avatars/thor.png" alt="Thor">
-                <input type="text" placeholder="Thor" class="username">
-            </div>
-            <div class="avatar-item">
-                <img src="avatars/hulk.png" alt="Hulk">
-                <input type="text" placeholder="Hulk" class="username">
-            </div>
+        <h1 class="login-title">Apex AI</h1>
+        <div class="avatar-circle">
+            <img src="avatar.png" alt="Avengers Avatar">
         </div>
-        <button id="login-btn">Enter Chat</button>
+        <input type="text" id="username" placeholder="Enter Username">
+        <button id="login-btn">Enter</button>
     </div>
 
-    <!-- Chat Section -->
+    <!-- Chat Page -->
     <div class="chat-container" id="chat-container">
         <header class="chat-header">
-            <h1 class="chat-title">Apex AI</h1>
-            <button class="sidebar-toggle" id="sidebar-toggle">☰</button>
+            <h2 class="chat-title">Apex AI</h2>
+            <button id="sidebar-toggle" class="sidebar-toggle">☰</button>
         </header>
 
-        <!-- Sidebar / Gallery -->
+        <!-- Sidebar Menu -->
         <div class="sidebar" id="sidebar">
-            <h2>Gallery</h2>
-            <div class="gallery-images">
-                <!-- Add AI-generated Avengers images here -->
-                <img src="avatars/ironman.png" alt="Iron Man">
-                <img src="avatars/captain.png" alt="Captain America">
-                <img src="avatars/thor.png" alt="Thor">
-            </div>
+            <div class="menu-item"><strong>Logo</strong></div>
+            <div class="menu-item"><strong>Username:</strong> <span id="display-username"></span></div>
+            <div class="menu-item"><strong>Recent Chats</strong></div>
+            <div class="menu-item"><strong>Upload Photo</strong></div>
         </div>
 
-        <!-- Messages -->
+        <!-- Messages Area -->
         <div class="messages" id="messages"></div>
 
         <!-- Input Box -->
         <div class="input-box">
             <input type="text" id="user-input" placeholder="Type a message...">
-            <button id="voice-btn"><span>🎤</span></button>
-            <button id="send-btn"><span>🚀</span></button>
+            <button id="voice-btn">🎤</button>
+            <button id="send-btn">🚀</button>
         </div>
     </div>
 
     <script src="script.js"></script>
 </body>
-  </html>
+    </html>
