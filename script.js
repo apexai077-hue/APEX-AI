@@ -1,30 +1,18 @@
-// Avatar selection logic
-const selectedAvatar = document.getElementById('selected-avatar');
-const avatarSelection = document.getElementById('avatar-selection');
-const avatarOptions = document.querySelectorAll('.avatar-option');
-
-selectedAvatar.addEventListener('click', () => {
-    avatarSelection.style.display = avatarSelection.style.display === 'flex' ? 'none' : 'flex';
-});
-
-avatarOptions.forEach(avatar => {
-    avatar.addEventListener('click', () => {
-        selectedAvatar.src = avatar.src;
-        avatarSelection.style.display = 'none';
-    });
-});
-
-// Login logic
+// Login logic with username restrictions
 const loginBtn = document.getElementById('login-btn');
 const loginContainer = document.getElementById('login-container');
 const chatContainer = document.getElementById('chat-container');
 
 loginBtn.addEventListener('click', () => {
-    const usernameInput = document.getElementById('username').value.trim();
-    if(usernameInput === '') {
-        alert('Please enter a username');
+    const username = document.getElementById('username').value.trim();
+    const usernameRegex = /^[A-Za-z0-9_]{3,20}$/; // only letters, numbers, underscore, 3-20 chars
+
+    if (!usernameRegex.test(username)) {
+        alert("Username must be 3-20 characters: letters, numbers, or underscore only.");
         return;
     }
+
+    // Proceed to chat
     loginContainer.style.display = 'none';
     chatContainer.style.display = 'flex';
 });
