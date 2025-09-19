@@ -1,136 +1,35 @@
-/* General */
-body {
-    margin: 0;
-    font-family: 'Arial Black', Arial, sans-serif;
-    background-color: #000;
-    color: #fff;
-}
+/* ---------- style.css ---------- */
 
-/* Login Page */
-.login-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    gap: 20px;
-    padding: 0 20px;
-    text-align: center;
-}
+/* General */ body { margin: 0; font-family: 'Arial Black', Arial, sans-serif; background-color: #000; color: #fff; }
 
-.login-title {
-    font-size: 2.5rem;
-    font-family: 'Impact', sans-serif;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-}
+/* Login Page */ .login-container { display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100vh; gap: 20px; padding: 0 20px; text-align: center; }
 
-#username {
-    padding: 15px;
-    border-radius: 15px;
-    border: none;
-    width: 100%;
-    max-width: 400px;
-    text-align: center;
-    background-color: #222;
-    color: #fff;
-    font-size: 1rem;
-}
+.login-title { font-size: 2.5rem; font-family: 'Impact', sans-serif; text-transform: uppercase; letter-spacing: 2px; }
 
-#login-btn {
-    padding: 15px 20px;
-    border-radius: 20px;
-    border: none;
-    cursor: pointer;
-    background-color: #1a73e8;
-    color: #fff;
-    width: 100%;
-    max-width: 400px;
-    font-size: 1rem;
-}
+#username { padding: 15px; border-radius: 15px; border: none; width: 100%; max-width: 400px; text-align: center; background-color: #222; color: #fff; font-size: 1rem; }
 
-/* Chat Page */
-.chat-container {
-    display: none;
-    flex-direction: column;
-    height: 100vh;
-    max-width: 600px;
-    margin: 0 auto;
-    background-color: #111;
-}
+#login-btn { padding: 15px 20px; border-radius: 20px; border: none; cursor: pointer; background-color: #1a73e8; color: #fff; width: 100%; max-width: 400px; font-size: 1rem; }
 
-/* Header */
-.chat-header {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 15px;
-    border-bottom: 1px solid #444;
-}
+/* Chat Page */ .chat-container { display: none; flex-direction: column; height: 100vh; max-width: 600px; margin: 0 auto; background-color: #111; }
 
-.chat-title {
-    font-size: 1.5rem;
-    font-family: 'Impact', sans-serif;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-}
+/* Header */ .chat-header { display: flex; justify-content: center; align-items: center; padding: 15px; border-bottom: 1px solid #444; }
 
-/* Messages */
-.messages {
-    flex: 1;
-    padding: 20px;
-    overflow-y: auto;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
+.chat-title { font-size: 1.5rem; font-family: 'Impact', sans-serif; text-transform: uppercase; letter-spacing: 2px; }
 
-/* Message Styles */
-.message {
-    max-width: 70%;
-    padding: 10px;
-    border-radius: 15px;
-}
+/* Messages */ .messages { flex: 1; padding: 20px; overflow-y: auto; display: flex; flex-direction: column; gap: 10px; }
 
-.user-message {
-    background-color: #1a73e8;
-    align-self: flex-end;
-}
+.message { max-width: 70%; padding: 10px; border-radius: 15px; }
 
-.ai-message {
-    background-color: #333;
-    align-self: flex-start;
-}
+.user-message { background-color: #1a73e8; align-self: flex-end; }
 
-/* Input Box */
-.input-box {
-    display: flex;
-    padding: 10px;
-    gap: 10px;
-    border-top: 1px solid #444;
-    background-color: #111;
-}
+.ai-message { background-color: #333; align-self: flex-start; }
 
-.input-box input {
-    flex: 1;
-    padding: 10px;
-    border-radius: 20px;
-    border: none;
-    outline: none;
-    background-color: #222;
-    color: #fff;
-}
+/* New Input Box Layout */ .input-container { display: flex; padding: 10px; gap: 10px; border-top: 1px solid #444; background-color: #111; align-items: center; }
 
-.input-box button {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    border: none;
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 1.2rem;
-    background-color: #000;
-    color: #fff;
-}
+.input-container input { flex: 1; padding: 10px; border-radius: 20px; border: none; outline: none; background-color: #222; color: #fff; font-size: 1rem; }
+
+.input-container .buttons { display: flex; gap: 10px; }
+
+.input-container .buttons button { width: 50px; height: 50px; border-radius: 50%; border: none; cursor: pointer; background-color: #000; color: #fff; font-size: 1.2rem; display: flex; justify-content: center; align-items: center; }
+
+                           
