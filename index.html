@@ -11,36 +11,34 @@
 <!-- Login Page -->
 <div class="login-container" id="login-container">
     <h1 class="login-title">Apex AI</h1>
+    <div class="avatar-container">
+        <img src="avatars/avatar1.gif" alt="Avatar" class="selected-avatar" id="selected-avatar">
+    </div>
+    <div class="avatar-selection" id="avatar-selection">
+        <img src="avatars/avatar1.gif" alt="Avatar" class="avatar-option">
+        <img src="avatars/avatar2.gif" alt="Avatar" class="avatar-option">
+        <img src="avatars/avatar3.gif" alt="Avatar" class="avatar-option">
+        <img src="avatars/avatar4.gif" alt="Avatar" class="avatar-option">
+    </div>
     <input type="text" id="username" placeholder="Enter Username" maxlength="20">
     <button id="login-btn">Enter</button>
 </div>
 
 <!-- Chat Page -->
-<div class="chat-wrapper" id="chat-wrapper">
-    <!-- Sidebar -->
-    <div class="sidebar" id="sidebar">
-        <div class="menu-item">Username: <span id="display-username"></span></div>
-        <div class="menu-item"><button id="new-chat">New Chat</button></div>
-        <div class="menu-item"><button id="photo-upload">Upload Photo</button></div>
-    </div>
+<div class="chat-container" id="chat-container">
+    <header class="chat-header">
+        <h2 class="chat-title">Apex AI</h2>
+    </header>
 
-    <!-- Main Chat -->
-    <div class="chat-container" id="chat-container">
-        <header class="chat-header">
-            <h2 class="chat-title">Apex AI</h2>
-            <button id="sidebar-toggle" class="sidebar-toggle">☰</button>
-        </header>
+    <div class="messages" id="messages"></div>
 
-        <div class="messages" id="messages"></div>
-
-        <div class="input-box">
-            <input type="text" id="user-input" placeholder="Type a message...">
-            <button id="voice-btn">🎤</button>
-            <button id="send-btn">🚀</button>
-        </div>
+    <div class="input-box">
+        <input type="text" id="user-input" placeholder="Type a message...">
+        <button id="voice-btn">🎤</button>
+        <button id="send-btn">🚀</button>
     </div>
 </div>
 
 <script src="script.js"></script>
 </body>
-  </html>
+    </html>
