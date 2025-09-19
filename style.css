@@ -79,22 +79,25 @@ input[type="text"] {
   cursor: pointer;
   font-size: 18px;
 } 
-/* User message on right */
+/* Force user messages to right */
 .message.user {
-  align-self: flex-end;
-  background-color: #4caf50; /* green bubble */
-  color: white;
-  padding: 8px 12px;
-  border-radius: 12px;
-  max-width: 70%;
+  float: right !important;        /* push to right */
+  clear: both;
+  text-align: right;
 }
 
-/* AI message on left */
+/* Force AI messages to left */
 .message.ai {
-  align-self: flex-start;
-  background-color: #e0e0e0; /* grey bubble */
-  color: black;
+  float: left !important;         /* push to left */
+  clear: both;
+  text-align: left;
+}
+
+/* Optional: add spacing from edges */
+.message {
+  margin: 5px 0;
   padding: 8px 12px;
   border-radius: 12px;
   max-width: 70%;
-  }
+  display: inline-block; /* ensures float works */
+}
