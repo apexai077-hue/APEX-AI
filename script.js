@@ -1,8 +1,23 @@
+// Avatar selection logic
+const selectedAvatar = document.getElementById('selected-avatar');
+const avatarSelection = document.getElementById('avatar-selection');
+const avatarOptions = document.querySelectorAll('.avatar-option');
+
+selectedAvatar.addEventListener('click', () => {
+    avatarSelection.style.display = avatarSelection.style.display === 'flex' ? 'none' : 'flex';
+});
+
+avatarOptions.forEach(avatar => {
+    avatar.addEventListener('click', () => {
+        selectedAvatar.src = avatar.src;
+        avatarSelection.style.display = 'none';
+    });
+});
+
 // Login logic
 const loginBtn = document.getElementById('login-btn');
 const loginContainer = document.getElementById('login-container');
-const chatWrapper = document.getElementById('chat-wrapper');
-const displayUsername = document.getElementById('display-username');
+const chatContainer = document.getElementById('chat-container');
 
 loginBtn.addEventListener('click', () => {
     const usernameInput = document.getElementById('username').value.trim();
@@ -10,17 +25,8 @@ loginBtn.addEventListener('click', () => {
         alert('Please enter a username');
         return;
     }
-    displayUsername.textContent = usernameInput;
     loginContainer.style.display = 'none';
-    chatWrapper.style.display = 'flex';
-});
-
-// Sidebar toggle
-const sidebarToggle = document.getElementById('sidebar-toggle');
-const sidebar = document.getElementById('sidebar');
-
-sidebarToggle.addEventListener('click', () => {
-    sidebar.classList.toggle('active');
+    chatContainer.style.display = 'flex';
 });
 
 // Chat logic
@@ -48,11 +54,7 @@ function addMessage(text, sender) {
     messages.scrollTop = messages.scrollHeight;
 }
 
-// Sidebar buttons
-document.getElementById('new-chat').addEventListener('click', () => {
-    messages.innerHTML = '';
-});
-
-document.getElementById('photo-upload').addEventListener('click', () => {
-    alert('Photo upload clicked!');
+// Mic button placeholder
+document.getElementById('voice-btn').addEventListener('click', () => {
+    alert('Voice input clicked!');
 });
