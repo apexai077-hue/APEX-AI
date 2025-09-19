@@ -46,4 +46,13 @@ function addMessage(text, sender) {
     msgDiv.textContent = text;
     messages.appendChild(msgDiv);
     messages.scrollTop = messages.scrollHeight;
-                          }
+}
+
+// Sidebar buttons
+document.getElementById('new-chat').addEventListener('click', () => {
+    messages.innerHTML = ''; // clears chat for new conversation
+});
+
+document.getElementById('photo-upload').addEventListener('click', () => {
+    alert('Photo upload clicked!'); // placeholder, you can add functionality
+});
