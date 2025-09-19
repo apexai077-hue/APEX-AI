@@ -1,7 +1,7 @@
 // Login logic
 const loginBtn = document.getElementById('login-btn');
 const loginContainer = document.getElementById('login-container');
-const chatContainer = document.getElementById('chat-container');
+const chatWrapper = document.getElementById('chat-wrapper');
 const displayUsername = document.getElementById('display-username');
 
 loginBtn.addEventListener('click', () => {
@@ -12,7 +12,7 @@ loginBtn.addEventListener('click', () => {
     }
     displayUsername.textContent = usernameInput;
     loginContainer.style.display = 'none';
-    chatContainer.style.display = 'flex';
+    chatWrapper.style.display = 'flex';
 });
 
 // Sidebar toggle
@@ -50,9 +50,9 @@ function addMessage(text, sender) {
 
 // Sidebar buttons
 document.getElementById('new-chat').addEventListener('click', () => {
-    messages.innerHTML = ''; // clears chat for new conversation
+    messages.innerHTML = '';
 });
 
 document.getElementById('photo-upload').addEventListener('click', () => {
-    alert('Photo upload clicked!'); // placeholder, you can add functionality
+    alert('Photo upload clicked!');
 });
