@@ -22,3 +22,29 @@ sendBtn.addEventListener("click", () => {
     }, 500);
   }
 });
+const chatContainer = document.getElementById('chatContainer'); // Your chat box ID
+const userInput = document.getElementById('userInput'); // Your input box ID
+const sendBtn = document.getElementById('sendBtn'); // Your send button ID
+
+sendBtn.addEventListener('click', () => {
+  const userText = userInput.value.trim();
+  if (!userText) return;
+
+  // Add user message
+  const userMessage = document.createElement('div');
+  userMessage.classList.add('message', 'user');
+  userMessage.textContent = userText;
+  chatContainer.appendChild(userMessage);
+
+  userInput.value = '';
+  chatContainer.scrollTop = chatContainer.scrollHeight;
+
+  // AI response (replace this with your AI API response)
+  setTimeout(() => {
+    const aiMessage = document.createElement('div');
+    aiMessage.classList.add('message', 'ai');
+    aiMessage.textContent = "AI says: " + userText; // temporary text
+    chatContainer.appendChild(aiMessage);
+    chatContainer.scrollTop = chatContainer.scrollHeight;
+  }, 500);
+});
