@@ -14,6 +14,8 @@ body {
     justify-content: center;
     height: 100vh;
     gap: 20px;
+    padding: 0 20px;
+    box-sizing: border-box;
     text-align: center;
 }
 
@@ -21,55 +23,28 @@ body {
     font-size: 2rem;
 }
 
-.avatar-container {
-    cursor: pointer;
-}
-
-.selected-avatar {
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    border: 2px solid #fff;
-    object-fit: cover;
-}
-
-.avatar-selection {
-    display: none;
-    margin-top: 10px;
-    gap: 10px;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.avatar-option {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    border: 2px solid #fff;
-    object-fit: cover;
-    cursor: pointer;
-}
-
-/* Username input */
 #username {
-    padding: 10px;
+    padding: 15px;
     border-radius: 15px;
     border: none;
-    width: 200px;
+    width: 100%; /* full width */
+    max-width: 400px;
     text-align: center;
     background-color: #222;
     color: #fff;
     font-size: 1rem;
 }
 
-/* Login button */
 #login-btn {
-    padding: 10px 20px;
+    padding: 15px 20px;
     border-radius: 20px;
     border: none;
     cursor: pointer;
     background-color: #1a73e8;
     color: #fff;
+    width: 100%;
+    max-width: 400px;
+    font-size: 1rem;
 }
 
 /* Chat Page */
@@ -153,4 +128,4 @@ body {
     font-size: 1.2rem;
     background-color: #000;
     color: #fff;
-        }
+    }
