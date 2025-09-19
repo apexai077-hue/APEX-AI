@@ -3,7 +3,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const loginBtn = document.getElementById('login-btn');
     const loginContainer = document.getElementById('login-container');
     const chatContainer = document.getElementById('chat-container');
-
     const usernameInput = document.getElementById('username');
 
     // Login button click
@@ -20,7 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
         chatContainer.style.display = 'flex';
     });
 
-    // Allow Enter key to submit login
+    // Enter key submits login
     usernameInput.addEventListener('keydown', (e) => {
         if (e.key === 'Enter') loginBtn.click();
     });
@@ -44,13 +43,11 @@ document.addEventListener('DOMContentLoaded', () => {
         addMessage(text, 'user');
         userInput.value = '';
 
-        // Example AI response
         setTimeout(() => {
             addMessage('This is Apex AI response.', 'ai');
         }, 500);
     });
 
-    // Enter key sends chat
     userInput.addEventListener('keydown', (e) => {
         if (e.key === 'Enter') sendBtn.click();
     });
