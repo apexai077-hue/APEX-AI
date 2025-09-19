@@ -48,3 +48,16 @@ sendBtn.addEventListener('click', () => {
     chatContainer.scrollTop = chatContainer.scrollHeight;
   }, 500);
 });
+// Ensure chat scrolls to bottom after adding messages
+function scrollToBottom() {
+    const chatContainer = document.getElementById('chatContainer'); // use your chat container ID
+    chatContainer.scrollTop = chatContainer.scrollHeight;
+}
+
+// Example: after appending user message
+// chatContainer.appendChild(userMessage);
+// scrollToBottom();
+
+// Example: after appending AI message
+// chatContainer.appendChild(aiMessage);
+// scrollToBottom();
