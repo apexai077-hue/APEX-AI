@@ -2,8 +2,15 @@
 const loginBtn = document.getElementById('login-btn');
 const loginContainer = document.getElementById('login-container');
 const chatContainer = document.getElementById('chat-container');
+const displayUsername = document.getElementById('display-username');
 
 loginBtn.addEventListener('click', () => {
+    const usernameInput = document.getElementById('username').value.trim();
+    if(usernameInput === '') {
+        alert('Please enter a username');
+        return;
+    }
+    displayUsername.textContent = usernameInput;
     loginContainer.style.display = 'none';
     chatContainer.style.display = 'flex';
 });
@@ -23,8 +30,7 @@ const messages = document.getElementById('messages');
 
 sendBtn.addEventListener('click', () => {
     const text = userInput.value.trim();
-    if (text === '') return;
-
+    if(text === '') return;
     addMessage(text, 'user');
     userInput.value = '';
 
@@ -36,8 +42,7 @@ sendBtn.addEventListener('click', () => {
 
 function addMessage(text, sender) {
     const msgDiv = document.createElement('div');
-    msgDiv.classList.add('message');
-    msgDiv.classList.add(sender === 'user' ? 'user-message' : 'ai-message');
+    msgDiv.classList.add('message', sender === 'user' ? 'user-message' : 'ai-message');
     msgDiv.textContent = text;
     messages.appendChild(msgDiv);
     messages.scrollTop = messages.scrollHeight;
