@@ -1,46 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Apex AI</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Apex AI</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- Login Page -->
-  <div class="login-container" id="login-container">
+<!-- Login Page -->
+<div class="login-container" id="login-container">
     <h1 class="login-title">Apex AI</h1>
-    <input type="text" id="username" placeholder="Enter Username">
+    <input type="text" id="username" placeholder="Enter Username" maxlength="20">
     <button id="login-btn">Enter</button>
-  </div>
+</div>
 
-  <!-- Chat Page -->
-  <div class="chat-container" id="chat-container">
-    <header class="chat-header">
-      <h2 class="chat-title">Apex AI</h2>
-      <button id="sidebar-toggle" class="sidebar-toggle">☰</button>
-    </header>
-
-    <!-- Sidebar Menu -->
+<!-- Chat Page -->
+<div class="chat-wrapper" id="chat-wrapper">
+    <!-- Sidebar -->
     <div class="sidebar" id="sidebar">
-      <div class="menu-item"><strong>Logo</strong></div>
-      <div class="menu-item"><strong>Username:</strong> <span id="display-username"></span></div>
-      <div class="menu-item"><button id="new-chat">New Chat</button></div>
-      <div class="menu-item"><button id="photo-upload">Upload Photo</button></div>
+        <div class="menu-item">Username: <span id="display-username"></span></div>
+        <div class="menu-item"><button id="new-chat">New Chat</button></div>
+        <div class="menu-item"><button id="photo-upload">Upload Photo</button></div>
     </div>
 
-    <!-- Messages Area -->
-    <div class="messages" id="messages"></div>
+    <!-- Main Chat -->
+    <div class="chat-container" id="chat-container">
+        <header class="chat-header">
+            <h2 class="chat-title">Apex AI</h2>
+            <button id="sidebar-toggle" class="sidebar-toggle">☰</button>
+        </header>
 
-    <!-- Input Box -->
-    <div class="input-box">
-      <input type="text" id="user-input" placeholder="Type a message...">
-      <button id="voice-btn">🎤</button>
-      <button id="send-btn">🚀</button>
+        <div class="messages" id="messages"></div>
+
+        <div class="input-box">
+            <input type="text" id="user-input" placeholder="Type a message...">
+            <button id="voice-btn">🎤</button>
+            <button id="send-btn">🚀</button>
+        </div>
     </div>
-  </div>
+</div>
 
 <script src="script.js"></script>
 </body>
-        </html>
+  </html>
