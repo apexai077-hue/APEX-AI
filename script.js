@@ -7,19 +7,19 @@ const chatBox = document.getElementById("chatBox");
 const sendBtn = document.getElementById("sendBtn");
 const messageInput = document.getElementById("messageInput");
 
-// ✅ Function to handle login
+// ✅ Login function
 function login() {
   const username = usernameInput.value.trim();
   if (username) {
     userDisplay.textContent = username;
-    loginPage.classList.add("hidden");
-    chatPage.classList.remove("hidden");
+    loginPage.classList.add("hidden");  // hides login page
+    chatPage.classList.remove("hidden"); // shows chat page
   } else {
     alert("Please enter a name");
   }
 }
 
-// ✅ Function to send chat messages
+// ✅ Send message function
 function sendMessage() {
   const msg = messageInput.value.trim();
   if (msg) {
@@ -31,22 +31,12 @@ function sendMessage() {
   }
 }
 
-// Click login button
+// Button & Enter key events
 loginBtn.addEventListener("click", login);
-
-// Press Enter on login input
 usernameInput.addEventListener("keypress", (e) => {
-  if (e.key === "Enter") {
-    login();
-  }
+  if (e.key === "Enter") login();
 });
-
-// Click send button
 sendBtn.addEventListener("click", sendMessage);
-
-// Press Enter in chat input
 messageInput.addEventListener("keypress", (e) => {
-  if (e.key === "Enter") {
-    sendMessage();
-  }
+  if (e.key === "Enter") sendMessage();
 });
