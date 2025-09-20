@@ -59,7 +59,7 @@ body {
   flex: 1;
   padding: 12px;
   border-radius: 20px;
-  border: 1px solid #444;     /* thin border so you can see it */
+  
   background-color: transparent !important; /* no grey */
   color: white;
   outline: none;
@@ -78,6 +78,7 @@ body {
 .divider {
   width: 100%;
   height: 2px;
-  background-color: grey;
+  background-color: grey !important;  /* force it */
   margin: 0;
-  }
+  display: block;
+}
