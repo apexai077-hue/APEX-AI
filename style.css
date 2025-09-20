@@ -8,20 +8,15 @@ body {
   height: 100vh;
 }
 
-#chatHeader {
-  width: 100%;
-  text-align: center !important;  /* force center */
-  display: block;                 /* ensure block element */
-  background: none !important;    /* remove background */
-  margin: 0 auto;
-  padding: 10px 0;
-}
-
-#chatHeader h1 {
-  font-size: 1.8rem;
-  font-weight: bold;
-  margin: 0;
-  color: white;
+#chatHeader, #chatHeader h1 {
+  all: unset;                    /* reset any old styles */
+  display: block !important;
+  width: 100% !important;
+  text-align: center !important;
+  font-size: 1.8rem !important;
+  font-weight: bold !important;
+  color: white !important;
+  margin: 10px 0 !important;
 }
 
 #chatBox {
