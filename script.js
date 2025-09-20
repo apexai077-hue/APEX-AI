@@ -7,7 +7,7 @@ function addMessage(text, sender) {
   msgDiv.classList.add("message", sender);
   msgDiv.textContent = text;
   chatBox.appendChild(msgDiv);
-  chatBox.scrollTop = chatBox.scrollHeight;
+  chatBox.scrollTop = chatBox.scrollHeight; // auto scroll
 }
 
 function sendMessage() {
@@ -23,7 +23,11 @@ function sendMessage() {
   }
 }
 
+// Event listeners
 sendBtn.addEventListener("click", sendMessage);
 messageInput.addEventListener("keypress", (e) => {
-  if (e.key === "Enter") sendMessage();
+  if (e.key === "Enter") {
+    e.preventDefault(); // stop form refresh
+    sendMessage();
+  }
 });
