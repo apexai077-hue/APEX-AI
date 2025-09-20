@@ -9,18 +9,20 @@ body {
 }
 
 #chatHeader {
-  background: none !important;  /* no background bar */
+  width: 100%;              /* full width */
+  display: flex;            /* flexbox for centering */
+  justify-content: center;  /* center horizontally */
+  align-items: center;      /* center vertically */
+  background: none !important; 
   margin: 0;
-  padding: 0;
-  text-align: center; /* keep child centered */
+  padding: 10px 0;
 }
 
 #chatHeader h1 {
-  font-size: 1.5rem;   /* slightly smaller */
+  font-size: 1.8rem;   /* clean title size */
   font-weight: bold;
-  margin: 10px 0;
   color: white;
-  text-align: center;  /* ensure text itself is centered */
+  margin: 0;
 }
 
 #chatBox {
