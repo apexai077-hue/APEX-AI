@@ -21,11 +21,11 @@ body {
 
 #chatBox {
   flex: 1;
-  padding: 15px;
+  padding: 10px;
   overflow-y: auto;
+  background-color: #2e2e2e; /* grey background */
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
   gap: 10px;
 }
 
