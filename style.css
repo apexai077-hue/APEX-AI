@@ -9,17 +9,18 @@ body {
 }
 
 #chatHeader {
-  background: none !important; /* no bg strip */
+  background: none !important;  /* no background bar */
   margin: 0;
   padding: 0;
+  text-align: center; /* keep child centered */
 }
 
 #chatHeader h1 {
-  text-align: center;
-  font-size: 1.5rem; /* smaller size */
+  font-size: 1.5rem;   /* slightly smaller */
   font-weight: bold;
   margin: 10px 0;
-  color: white; /* visible on dark bg */
+  color: white;
+  text-align: center;  /* ensure text itself is centered */
 }
 
 #chatBox {
