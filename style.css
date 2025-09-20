@@ -19,11 +19,13 @@ body {
   margin: 10px 0 !important;
 }
 
+/* Grey chat section */
 #chatBox {
   flex: 1;
+  width: 100%;
   padding: 10px;
+  background-color: #2e2e2e; /* grey panel */
   overflow-y: auto;
-  background-color: #2e2e2e; /* grey background */
   display: flex;
   flex-direction: column;
   gap: 10px;
