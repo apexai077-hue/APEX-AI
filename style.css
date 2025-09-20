@@ -1,86 +1,75 @@
 body {
+  background: #111; /* dark background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
   margin: 0;
   font-family: Arial, sans-serif;
-  background: #111;
-  color: #fff;
+}
+
+/* Outer chat container */
+.chatContainer {
+  background: #1e1e1e; /* grey panel */
+  width: 90%;
+  max-width: 400px;
+  height: 90%;
+  border-radius: 15px;
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  padding: 10px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.5);
 }
 
-#chatHeader, #chatHeader h1 {
-  all: unset;                    /* reset any old styles */
-  display: block !important;
-  width: 100% !important;
-  text-align: center !important;
-  font-size: 1.8rem !important;
-  font-weight: bold !important;
-  color: white !important;
-  margin: 10px 0 !important;
+/* Title */
+#chatHeader h1 {
+  text-align: center;
+  font-size: 1.5rem;
+  margin: 10px 0;
+  color: white;
 }
 
-/* Grey chat section */
+/* Divider line */
+.divider {
+  width: 100%;
+  height: 2px;
+  background-color: grey;
+  margin: 5px 0;
+}
+
+/* Chat messages area */
 #chatBox {
   flex: 1;
-  width: 100%;
-  padding: 10px;
-  background-color: #2e2e2e; /* grey panel */
   overflow-y: auto;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
+  padding: 10px;
+  background: #2e2e2e;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  color: white;
 }
 
-.message {
-  max-width: 70%;
-  padding: 10px 15px;
-  border-radius: 15px;
-}
-
-.user {
-  align-self: flex-end;
-  background: #0078ff;
-  color: #fff;
-}
-
-.ai {
-  align-self: flex-start;
-  background: #333;
-  color: #fff;
-}
-
+/* Message input bar */
 #messageBar {
   display: flex;
-  padding: 10px;
-  background: transparent !important; /* remove grey strip */
-  border-top: 1px solid #333;  /* optional thin line */
   gap: 10px;
 }
 
 #messageInput {
   flex: 1;
-  padding: 12px;
+  padding: 10px;
   border-radius: 20px;
-  
-  background-color: transparent !important; /* no grey */
+  border: 1px solid #444;
+  background: transparent;
   color: white;
-  outline: none;
-  box-shadow: none !important; /* remove any shadow */
 }
+
 #sendBtn {
-  background: #000;
-  border: none;
-  border-radius: 50%;
   width: 40px;
   height: 40px;
-  color: #fff;
+  border-radius: 50%;
+  border: none;
+  background: black;
+  color: white;
   font-size: 1.2rem;
   cursor: pointer;
-}
-.divider {
-  width: 100%;
-  height: 2px;
-  background-color: grey !important;  /* force it */
-  margin: 0;
-  display: block;
 }
