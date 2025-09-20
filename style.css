@@ -53,7 +53,8 @@ body {
 #messageBar {
   display: flex;
   padding: 10px;
-  background: #1e1e1e;
+  background: none !important; /* remove grey bar */
+  border-top: 1px solid #333;  /* optional thin line */
   gap: 10px;
 }
 
@@ -61,10 +62,10 @@ body {
   flex: 1;
   padding: 12px;
   border-radius: 20px;
-  border: none;
-  background: transparent; /* remove grey bg */
+  border: 1px solid #444;   /* subtle border so visible */
+  background: none !important; /* transparent */
   color: white;
-  outline: none; /* remove blue border on click */
+  outline: none;
 }
 #sendBtn {
   background: #000;
