@@ -14,7 +14,7 @@ loginBtn.addEventListener("click", () => {
     loginPage.classList.add("hidden");
     chatPage.classList.remove("hidden");
   } else {
-    alert("Please enter a username");
+    alert("Please enter a name");
   }
 });
 
