@@ -1,3 +1,5 @@
+console.log("✅ script.js connected!");
+
 const chatBox = document.getElementById("chatBox");
 const sendBtn = document.getElementById("sendBtn");
 const messageInput = document.getElementById("messageInput");
@@ -7,7 +9,7 @@ function addMessage(text, sender) {
   msgDiv.classList.add("message", sender);
   msgDiv.textContent = text;
   chatBox.appendChild(msgDiv);
-  chatBox.scrollTop = chatBox.scrollHeight; // auto scroll
+  chatBox.scrollTop = chatBox.scrollHeight;
 }
 
 function sendMessage() {
@@ -16,18 +18,16 @@ function sendMessage() {
     addMessage(msg, "user");
     messageInput.value = "";
 
-    // Simulated AI reply
     setTimeout(() => {
       addMessage("AI: " + msg.split("").reverse().join(""), "ai");
     }, 800);
   }
 }
 
-// Event listeners
 sendBtn.addEventListener("click", sendMessage);
 messageInput.addEventListener("keypress", (e) => {
   if (e.key === "Enter") {
-    e.preventDefault(); // stop form refresh
+    e.preventDefault();
     sendMessage();
   }
 });
