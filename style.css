@@ -62,10 +62,11 @@ body {
   flex: 1;
   padding: 12px;
   border-radius: 20px;
-  border: 1px solid #444;   /* thin outline so it's visible */
-  background: transparent !important; /* remove grey fill */
+  border: 1px solid #444;     /* thin border so you can see it */
+  background-color: transparent !important; /* no grey */
   color: white;
   outline: none;
+  box-shadow: none !important; /* remove any shadow */
 }
 #sendBtn {
   background: #000;
