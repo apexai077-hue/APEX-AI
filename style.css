@@ -9,13 +9,17 @@ body {
 }
 
 #chatHeader {
-  text-align: center;
-  padding: 10px 0;
-  background: none;
-  font-size: 1.2rem;
-  font-weight: bold;
+  background: none !important; /* no bg strip */
   margin: 0;
-  color: white; /* make sure title is visible */
+  padding: 0;
+}
+
+#chatHeader h1 {
+  text-align: center;
+  font-size: 1.5rem; /* smaller size */
+  font-weight: bold;
+  margin: 10px 0;
+  color: white; /* visible on dark bg */
 }
 
 #chatBox {
