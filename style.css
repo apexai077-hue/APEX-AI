@@ -10,10 +10,11 @@ body {
 
 #chatHeader {
   text-align: center;
-  padding: 15px;
-  background: #1e1e1e;
-  font-size: 1.5rem;
+  padding: 10px 0;   /* smaller padding */
+  background: none;  /* remove bar background */
+  font-size: 1.2rem; /* smaller size */
   font-weight: bold;
+  margin: 0;         /* no extra margin */
 }
 
 #chatBox {
