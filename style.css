@@ -53,7 +53,7 @@ body {
 #messageBar {
   display: flex;
   padding: 10px;
-  background: none !important; /* remove grey bar */
+  background: transparent !important; /* remove grey strip */
   border-top: 1px solid #333;  /* optional thin line */
   gap: 10px;
 }
@@ -62,8 +62,8 @@ body {
   flex: 1;
   padding: 12px;
   border-radius: 20px;
-  border: 1px solid #444;   /* subtle border so visible */
-  background: none !important; /* transparent */
+  border: 1px solid #444;   /* thin outline so it's visible */
+  background: transparent !important; /* remove grey fill */
   color: white;
   outline: none;
 }
