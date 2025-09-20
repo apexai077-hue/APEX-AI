@@ -24,18 +24,9 @@ body {
   margin-bottom: 20px;
 }
 
-.avatar-container img {
-  width: 140px;
-  height: 140px;
-  border-radius: 50%;
-  border: 3px solid #444;
-  margin-bottom: 20px;
-  object-fit: cover;
-}
-
 #username {
-  padding: 10px;
-  width: 250px;
+  padding: 12px;
+  width: 280px;
   border: none;
   border-radius: 8px;
   margin-bottom: 15px;
@@ -45,17 +36,19 @@ body {
 }
 
 #loginBtn {
-  padding: 10px 40px;
+  padding: 12px;
+  width: 280px; /* full width button */
   border: none;
   border-radius: 8px;
-  background: #333;
+  background: #28a745;
   color: white;
   cursor: pointer;
-  font-size: 1rem;
+  font-size: 1.1rem;
+  font-weight: bold;
 }
 
 #loginBtn:hover {
-  background: #444;
+  background: #218838;
 }
 
 /* Chat Page */
@@ -75,12 +68,6 @@ body {
 
 #chatHeader h1 {
   margin: 0;
-}
-
-#chatHeader nav {
-  display: flex;
-  gap: 20px;
-  font-size: 0.9rem;
 }
 
 #chatBox {
