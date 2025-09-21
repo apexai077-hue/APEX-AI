@@ -11,15 +11,12 @@ body {
 
 /* Outer chat container */
 .chatContainer {
-  background: #1e1e1e; /* grey panel */
   width: 90%;
   max-width: 400px;
   height: 90%;
-  border-radius: 15px;
   display: flex;
   flex-direction: column;
   padding: 10px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
 }
 
 /* Title */
@@ -30,23 +27,14 @@ body {
   color: white;
 }
 
-/* Divider line */
-.divider {
-  width: 100%;
-  height: 2px;
-  background-color: grey;
-  margin: 5px 0;
-}
-
-/* Chat messages area */
+/* Chat messages area with grey bar */
 #chatBox {
   flex: 1;
   overflow-y: auto;
   padding: 10px;
-  border-radius: 10px;
-  margin-bottom: 10px;
-  color: white;
-
+  margin: 10px 0;
+  border-radius: 15px;
+  background: #1e1e1e; /* grey bar for chat only */
   display: flex;
   flex-direction: column;
 }
@@ -60,7 +48,7 @@ body {
   font-size: 1rem;
   word-wrap: break-word;
   display: inline-block;
-  background: rgba(50, 50, 50, 0.5); /* transparent grey background */
+  background: rgba(50, 50, 50, 0.5); /* transparent grey */
   color: white;
 
   /* Rainbow border */
@@ -118,10 +106,11 @@ body {
   }
 }
 
-/* Message input bar */
+/* Message input bar (outside grey chat area) */
 #messageBar {
   display: flex;
   gap: 10px;
+  margin-top: 10px;
 }
 
 /* Input box */
