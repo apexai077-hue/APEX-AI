@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Apex AI</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
   <div class="chatContainer">
@@ -13,16 +15,16 @@
       <h1>APEX AI</h1>
     </div>
 
-    <!-- Divider line -->
-    <div class="divider"></div>
-
     <!-- Chat area -->
     <div id="chatBox"></div>
 
-    <!-- Message input -->
+    <!-- Input bar -->
     <div id="messageBar">
-      <input type="text" id="messageInput" placeholder="Type a message...">
-      <button id="sendBtn">➤</button>
+      <div class="inputWrapper">
+        <input type="text" id="messageInput" placeholder="Type a message..." />
+        <button id="micBtn"><i class="fa-solid fa-microphone"></i></button>
+      </div>
+      <button id="sendBtn"><i class="fa-solid fa-paper-plane"></i></button>
     </div>
   </div>
 
