@@ -22,6 +22,7 @@ body {
   border-bottom: 1px solid #333;
   z-index: 1000;
 }
+
 .chat-header h1 {
   margin: 0;
   font-size: 22px;
@@ -58,7 +59,7 @@ body {
   border: none;
   outline: none;
   background: #555;   /* grey background */
-  color: white;       /* white text inside */
+  color: white;       /* white text */
   font-size: 14px;
 }
 
@@ -68,8 +69,8 @@ body {
   height: 45px;
   border-radius: 50%;
   border: none;
-  background: black;  /* black button */
-  color: white;       /* white arrow icon */
+  background: #555;   /* grey button */
+  color: white;       /* white icon */
   font-size: 18px;
   cursor: pointer;
 }
@@ -84,11 +85,17 @@ body {
   font-size: 15px;
   clear: both;
 }
+
+/* User message (right side) */
 .user {
-  background: #444;   /* grey bubble */
+  background: #333;
   float: right;
+  text-align: right;
 }
+
+/* AI message (left side) */
 .ai {
-  background: #333;   /* darker grey bubble */
+  background: #444;
   float: left;
+  text-align: left;
 }
