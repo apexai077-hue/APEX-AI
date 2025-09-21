@@ -7,19 +7,22 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="app-container">
-    <header class="app-header">
-      <h1>APEX AI</h1>
-    </header>
+  <div class="chatContainer">
 
-    <main class="chat-container">
-      <div id="chatBox" class="chat-box"></div>
-    </main>
+    <!-- Fixed Title -->
+    <div id="chatHeader">
+      APEX AI
+    </div>
 
-    <footer class="input-container">
-      <input id="messageInput" type="text" placeholder="Type a message..." />
-      <button id="sendBtn" class="send-btn">➤</button>
-    </footer>
+    <!-- Scrollable Messages -->
+    <div id="chatBox"></div>
+
+    <!-- Fixed Input at Bottom -->
+    <div id="inputArea">
+      <input type="text" id="userInput" placeholder="Type a message...">
+      <button id="sendBtn">Send</button>
+    </div>
+
   </div>
 
   <script src="script.js"></script>
