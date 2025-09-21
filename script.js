@@ -1,33 +1,27 @@
-console.log("✅ script.js connected!");
-
-const chatBox = document.getElementById("chatBox");
-const sendBtn = document.getElementById("sendBtn");
-const messageInput = document.getElementById("messageInput");
-
-function addMessage(text, sender) {
-  const msgDiv = document.createElement("div");
-  msgDiv.classList.add("message", sender);
-  msgDiv.textContent = text;
-  chatBox.appendChild(msgDiv);
-  chatBox.scrollTop = chatBox.scrollHeight;
-}
+document.getElementById("sendBtn").addEventListener("click", sendMessage);
+document.getElementById("userInput").addEventListener("keypress", function(e) {
+  if (e.key === "Enter") sendMessage();
+});
 
 function sendMessage() {
-  const msg = messageInput.value.trim();
-  if (msg) {
-    addMessage(msg, "user");
-    messageInput.value = "";
+  const input = document.getElementById("userInput");
+  const message = input.value.trim();
+  if (message === "") return;
 
-    setTimeout(() => {
-      addMessage("AI: " + msg.split("").reverse().join(""), "ai");
-    }, 800);
-  }
+  addMessage(message, "userMessage");
+  input.value = "";
+
+  setTimeout(() => {
+    addMessage("This is a response from Apex AI.", "aiMessage");
+  }, 800);
 }
 
-sendBtn.addEventListener("click", sendMessage);
-messageInput.addEventListener("keypress", (e) => {
-  if (e.key === "Enter") {
-    e.preventDefault();
-    sendMessage();
-  }
-});
+function addMessage(text, type) {
+  const chatBox = document.getElementById("chatBox");
+  const msg = document.createElement("div");
+  msg.classList.add("message", type);
+  msg.textContent = text;
+  chatBox.appendChild(msg);
+
+  chatBox.scrollTop = chatBox.scrollHeight;
+}
