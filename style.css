@@ -1,116 +1,95 @@
-/* General */
-body {
-  background: black;
+/* Reset */
+* {
   margin: 0;
-  font-family: Arial, sans-serif;
-  color: white;
-  height: 100vh;
-  overflow: hidden;   /* ❌ prevent page scrolling */
-  display: flex;
-  justify-content: center;
-  align-items: stretch;
-}
-
-/* Chat container → full screen on phone */
-.chatContainer {
-  width: 100%;
-  max-width: 100%;
-  height: 100vh;       /* full height */
-  display: flex;
-  flex-direction: column;
+  padding: 0;
   box-sizing: border-box;
 }
 
-/* Title */
-#chatHeader h1 {
-  text-align: center;
-  font-size: 1.5rem;
-  margin: 12px 0;
-  color: white;
+html, body {
+  height: 100%;
+  width: 100%;
+  background: #000;
+  color: #fff;
+  font-family: Arial, sans-serif;
+  overflow: hidden; /* ❌ Prevents page scrolling */
 }
 
-/* Chat area */
-#chatBox {
-  flex: 1;
-  height: 100%;
-  overflow-y: auto;   /* scroll only inside messages */
-  padding: 10px;
-  margin-bottom: 60px; /* space for input bar */
+/* App Layout */
+.app-container {
   display: flex;
   flex-direction: column;
-  background: transparent;
-  border: none;
+  height: 100%;
+  width: 100%;
 }
 
-/* Chat bubbles */
+/* Header */
+.app-header {
+  text-align: center;
+  padding: 15px;
+}
+
+.app-header h1 {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+/* Chat Area */
+.chat-container {
+  flex: 1;
+  overflow-y: auto; /* ✅ Scroll only here */
+  padding: 10px;
+}
+
+.chat-box {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Messages */
 .message {
   max-width: 70%;
-  padding: 10px 14px;
-  margin: 6px 0;
+  padding: 10px;
   border-radius: 12px;
-  font-size: 1rem;
+  background: rgba(128, 128, 128, 0.2);
   word-wrap: break-word;
-  background: rgba(150, 150, 150, 0.3);
-  color: white;
 }
 
-/* User → right */
-.message.user {
+.user {
   align-self: flex-end;
+  background: rgba(128, 128, 128, 0.3);
 }
 
-/* AI → left */
-.message.ai {
+.ai {
   align-self: flex-start;
+  background: rgba(128, 128, 128, 0.2);
 }
 
-/* Input bar fixed at bottom */
-#messageBar {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
+/* Input */
+.input-container {
   display: flex;
   align-items: center;
-  gap: 10px;
-  padding: 8px 12px;
-  background: black;
-  box-sizing: border-box;
+  padding: 10px;
+  background: #000;
 }
 
-/* Input wrapper */
-.inputWrapper {
+.input-container input {
   flex: 1;
-  display: flex;
-  align-items: center;
-  background: transparent;
-  border: 1px solid white;
-  border-radius: 25px;
-  padding: 5px 10px;
-}
-
-/* Input box */
-#messageInput {
-  flex: 1;
-  padding: 8px;
-  border: none;
+  padding: 10px;
+  border-radius: 20px;
+  border: 1px solid #444;
+  background: #111;
+  color: #fff;
   outline: none;
-  background: transparent;
-  color: white;
-  font-size: 1rem;
 }
 
-/* Send button outside */
-#sendBtn {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
+.send-btn {
+  margin-left: 8px;
+  padding: 10px 15px;
   border: none;
-  background: white;
-  color: black;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.2rem;
+  border-radius: 50%;
+  background: #000;
+  color: #fff;
   cursor: pointer;
+  font-size: 18px;
 }
