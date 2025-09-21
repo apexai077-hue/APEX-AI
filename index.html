@@ -1,24 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Apex AI</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="chatContainer">
-    <!-- Fixed Title -->
-    <div id="chatHeader">APEX AI</div>
+  <!-- Title -->
+  <header class="chat-header">
+    <h1>APEX AI</h1>
+  </header>
 
-    <!-- Scrollable Messages -->
-    <div id="chatBox" aria-live="polite"></div>
+  <!-- Messages -->
+  <main class="chat-container" id="chatContainer">
+    <!-- Messages will appear here -->
+  </main>
 
-    <!-- Fixed Input at Bottom -->
-    <div id="inputArea">
-      <input type="text" id="userInput" placeholder="Type a message..." autocomplete="off" />
-      <button id="sendBtn" aria-label="Send message">➤</button>
-    </div>
+  <!-- Input Box -->
+  <div class="input-area">
+    <input type="text" id="userInput" placeholder="Type a message..." />
+    <button id="sendBtn">➤</button>
   </div>
 
   <script src="script.js"></script>
