@@ -11,7 +11,7 @@ function sendMessage() {
   const text = userInput.value.trim();
   if (text === "") return;
 
-  // User message
+  // User message (right side)
   const userMsg = document.createElement("div");
   userMsg.className = "message user-message";
   userMsg.innerText = text;
@@ -20,17 +20,15 @@ function sendMessage() {
   // Clear input
   userInput.value = "";
 
-  // Fake AI response
+  // Fake AI reply (left side)
   setTimeout(() => {
     const aiMsg = document.createElement("div");
     aiMsg.className = "message ai-message";
     aiMsg.innerText = "AI: " + text;
     chatContainer.appendChild(aiMsg);
 
-    // Auto scroll down
     chatContainer.scrollTop = chatContainer.scrollHeight;
   }, 600);
 
-  // Auto scroll down
   chatContainer.scrollTop = chatContainer.scrollHeight;
 }
