@@ -35,6 +35,8 @@ body {
   margin: 10px 0;
   display: flex;
   flex-direction: column;
+  background: transparent;   /* no grey background */
+  border: none;
 }
 
 /* Chat bubbles */
@@ -45,8 +47,9 @@ body {
   border-radius: 12px;
   font-size: 1rem;
   word-wrap: break-word;
-  background: rgba(150, 150, 150, 0.3); /* Grey box */
+  background: rgba(150, 150, 150, 0.3); /* grey box */
   color: white;
+  border: none;
 }
 
 /* User → right */
@@ -89,21 +92,7 @@ body {
   font-size: 1rem;
 }
 
-/* Mic button inside input */
-#micBtn {
-  width: 35px;
-  height: 35px;
-  border-radius: 50%;
-  border: none;
-  background: white;
-  color: black;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-}
-
-/* Send button outside input */
+/* Send button outside */
 #sendBtn {
   width: 40px;
   height: 40px;
