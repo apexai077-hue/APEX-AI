@@ -1,30 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Apex AI</title>
-  <link rel="stylesheet" href="style.css" />
-  <!-- Font Awesome for icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="chatContainer">
-    <!-- Title -->
-    <div id="chatHeader">
+  <div class="app-container">
+    <header class="app-header">
       <h1>APEX AI</h1>
-    </div>
+    </header>
 
-    <!-- Chat area -->
-    <div id="chatBox"></div>
+    <main class="chat-container">
+      <div id="chatBox" class="chat-box"></div>
+    </main>
 
-    <!-- Input bar -->
-    <div id="messageBar">
-      <div class="inputWrapper">
-        <input type="text" id="messageInput" placeholder="Type a message..." />
-      </div>
-      <button id="sendBtn"><i class="fa-solid fa-paper-plane"></i></button>
-    </div>
+    <footer class="input-container">
+      <input id="messageInput" type="text" placeholder="Type a message..." />
+      <button id="sendBtn" class="send-btn">➤</button>
+    </footer>
   </div>
 
   <script src="script.js"></script>
