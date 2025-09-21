@@ -1,27 +1,40 @@
-document.getElementById("sendBtn").addEventListener("click", sendMessage);
-document.getElementById("userInput").addEventListener("keypress", function(e) {
-  if (e.key === "Enter") sendMessage();
-});
+// Minimal chat logic for Apex AI demo
+// Make sure this file is saved exactly as "script.js" (case-sensitive)
 
-function sendMessage() {
-  const input = document.getElementById("userInput");
-  const message = input.value.trim();
-  if (message === "") return;
+const chatBox = document.getElementById('chatBox');
+const sendBtn = document.getElementById('sendBtn');
+const userInput = document.getElementById('userInput');
 
-  addMessage(message, "userMessage");
-  input.value = "";
-
-  setTimeout(() => {
-    addMessage("This is a response from Apex AI.", "aiMessage");
-  }, 800);
-}
-
-function addMessage(text, type) {
-  const chatBox = document.getElementById("chatBox");
-  const msg = document.createElement("div");
-  msg.classList.add("message", type);
-  msg.textContent = text;
-  chatBox.appendChild(msg);
-
+// Helper: create and append a message bubble
+function appendMessage(text, who) {
+  const el = document.createElement('div');
+  el.className = `message ${who}`;
+  el.textContent = text;
+  chatBox.appendChild(el);
+  // keep focus/visible
   chatBox.scrollTop = chatBox.scrollHeight;
 }
+
+// Send handler
+function sendMessage() {
+  const txt = userInput.value.trim();
+  if (!txt) return;
+  appendMessage(txt, 'user');
+  userInput.value = '';
+  // demo AI reply (replace with real API call if needed)
+  setTimeout(() => {
+    appendMessage("Apex AI reply: " + (txt.length > 80 ? txt.slice(0,80)+'...' : txt.split('').reverse().join('')), 'ai');
+  }, 650);
+}
+
+// Events
+sendBtn.addEventListener('click', sendMessage);
+userInput.addEventListener('keydown', (e) => {
+  if (e.key === 'Enter') {
+    e.preventDefault();
+    sendMessage();
+  }
+});
+
+// Small accessibility: focus text input on load
+window.addEventListener('load', () => userInput.focus());
