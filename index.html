@@ -1,28 +1,24 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Apex AI</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Header -->
-  <header class="app-header">
+  <!-- Title -->
+  <div class="app-header">
     <h1>APEX AI</h1>
-  </header>
-
-  <!-- Chat messages -->
-  <div id="chatBox" aria-live="polite" role="log">
-    <div class="message ai">Hello — I’m Apex AI. Type something and press send.</div>
   </div>
 
-  <!-- Input area -->
+  <!-- Chat messages -->
+  <div id="chatBox"></div>
+
+  <!-- Input -->
   <div class="input-area">
-    <div class="input-wrap">
-      <input id="userInput" type="text" placeholder="Type a message..." autocomplete="off" />
-    </div>
-    <button id="sendBtn" aria-label="Send">➤</button>
+    <input id="userInput" type="text" placeholder="Type a message...">
+    <button id="sendBtn">➤</button>
   </div>
 
   <script src="script.js"></script>
