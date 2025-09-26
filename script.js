@@ -16,22 +16,36 @@ function createMessage(text, sender) {
   return msg;
 }
 
-function sendMessage() {
+async function sendMessage() {
   const text = userInput.value.trim();
   if (!text) return;
 
-  // user message
+  // show user message
   const userMsg = createMessage(text, 'user');
   chatBox.appendChild(userMsg);
   scrollToBottom();
   userInput.value = '';
 
-  // fake AI reply
-  setTimeout(() => {
-    const aiMsg = createMessage("Apex AI reply: " + text, 'ai');
+  // call Netlify function for AI reply
+  try {
+    const res = await fetch('/.netlify/functions/gemini', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ message: text }),
+    });
+
+    const data = await res.json();
+
+    const aiReply = data.reply || "⚠️ No reply from AI.";
+    const aiMsg = createMessage(aiReply, 'ai');
     chatBox.appendChild(aiMsg);
     scrollToBottom();
-  }, 600);
+
+  } catch (err) {
+    const errorMsg = createMessage("❌ Error: " + err.message, 'ai');
+    chatBox.appendChild(errorMsg);
+    scrollToBottom();
+  }
 }
 
 sendBtn.addEventListener('click', sendMessage);
