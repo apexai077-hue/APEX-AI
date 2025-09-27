@@ -10,7 +10,7 @@ export async function handler(event, context) {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          "Authorization": `Bearer ${process.env.GEMINI_API_KEY}`
+          "Authorization": "Bearer AIzaSyDRbgReZZEAUF4Jb47xGH02yusm9cSh9TA
         },
         body: JSON.stringify({
           contents: [
